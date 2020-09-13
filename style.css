@@ -65,13 +65,21 @@ body {
 
 @media screen and (max-width: 900px) {
     .calculator-grid {
-        grid-template-columns: repeat(6, 48px);
+        /* grid-template-columns: repeat(6, 48px);
         grid-template-rows: repeat(6, 79px);
-        padding-top: 23px
+        padding-top: 23px */
+        grid-template-columns: repeat(6, 53px);
+        grid-template-rows: repeat(6, 85px);
     }
 
     .output {
         margin-top: -24px;
+    }
+    .output > .previous-operand {
+        font-size: 1rem;
+    }
+    .output > .current-operand {
+        font-size: 1.5rem;
     }
     .calculator-grid > button{
         font-size: unset;
