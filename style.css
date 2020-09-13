@@ -13,8 +13,8 @@ body {
     justify-content: center;
     align-content: center;
     min-height: 100vh;
-    grid-template-columns: repeat(4, 100px);
-    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+    grid-template-columns: repeat(6, 100px);
+    grid-template-rows: minmax(150px, auto) repeat(6, 100px);
 }
 .calculator-grid > button {
     cursor: pointer;
@@ -26,8 +26,8 @@ body {
 .calculator-grid > button:hover {
     background-color: rgba(255, 255, 255, .88);
 }
-.span-two {
-    grid-column: span 2;
+#span-two {
+    grid-column: span 2 !important;
 }
 .output {
     grid-column: 1 / -1;
@@ -39,7 +39,21 @@ body {
     padding: 13px;
     word-wrap: break-word;
     word-break: break-all;
+    border-radius: 12px;
 }
+
+.AC {
+    border-top-left-radius: 10px;
+}
+.division {
+    border-top-right-radius: 10px;
+}
+.ANS {    border-bottom-left-radius: 20px;
+}
+.equals {
+    border-bottom-right-radius: 20px;
+}
+
 .output > .previous-operand {
     color: rgba(255, 255, 255, .95);
     font-size: 1.5rem;
@@ -47,4 +61,20 @@ body {
 .output > .current-operand {
     color: rgba(255, 255, 255, .95);
     font-size: 2.5rem;
+}
+
+@media screen and (max-width: 900px) {
+    .calculator-grid {
+        grid-template-columns: repeat(6, 59px);
+        grid-template-rows: repeat(6, 120px);
+        margin-top: 22px;
+    }
+
+    .output {
+        margin-top: -40px;
+    }
+    .calculator-grid > button{
+        font-size: unset;
+        font-weight: 600;
+    }
 }
