@@ -14,7 +14,7 @@ body {
     align-content: center;
     min-height: 100vh;
     grid-template-columns: repeat(6, 100px);
-    grid-template-rows: minmax(150px, auto) repeat(6, 100px);
+    grid-template-rows: minmax(150px, auto) repeat(5, 100px);
 }
 .calculator-grid > button {
     cursor: pointer;
@@ -65,9 +65,12 @@ body {
 
 @media screen and (max-width: 900px) {
     .calculator-grid {
-        grid-template-columns: repeat(6, 59px);
+        /* grid-template-columns: repeat(6, 59px);
         grid-template-rows: repeat(6, 120px);
-        margin-top: 22px;
+        margin-top: 22px; */
+        grid-template-columns: repeat(6, 57px);
+        grid-template-rows: repeat(6, 96px);
+        margin-top: 21px;
     }
 
     .output {
